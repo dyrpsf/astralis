@@ -171,7 +171,7 @@ export function getPlanetTexture(id: string, baseColor: string): THREE.Texture {
     (realTex) => {
       realTex.colorSpace = THREE.SRGBColorSpace;
       realTex.anisotropy = 8;
-      tex.image = realTex.image;
+      (tex as THREE.Texture).image = realTex.image;
       tex.needsUpdate = true;
     },
     undefined,
